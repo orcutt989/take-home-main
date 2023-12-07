@@ -1,0 +1,35 @@
+name: Build and deploy 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+
+      - name: Set Node.js 21.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+
+      - name: Install 🔧
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Build 🏗️
+        run: |
+          yarn build
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: public

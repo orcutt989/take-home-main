@@ -15,10 +15,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Set Node.js 21.x
+      - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 21.x
+          node-version: 16.x
 
       - name: Install 🔧
         uses: borales/actions-yarn@v4

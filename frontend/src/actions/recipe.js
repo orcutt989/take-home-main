@@ -16,6 +16,10 @@ const failedRecipe = (payload) => ({
   payload,
 });
 
+export const clearRecipe = () => ({
+  type: CLEAR_RECIPE,
+});
+
 export const executeRecipeFetch = async (id) => {
   try {
     // Set loading state to true while fetching data

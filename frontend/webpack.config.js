@@ -5,7 +5,7 @@ const path = require("path")
 const webpack = require("webpack")
 
 const staticDir = path.resolve(__dirname, "static")
-const buildDir = path.resolve(__dirname, "dist")
+const buildDir = path.resolve(__dirname, "/")
 const buildTemplate = path.resolve(staticDir, "index-template.html")
 const srcDir = path.resolve(__dirname, "src")
 const entryPoint = path.resolve(__dirname, "src", "index.js")
@@ -24,7 +24,7 @@ module.exports = {
     plugins: [PnpWebpackPlugin.moduleLoader(module)],
   },
   output: {
-    path: '/',
+    path: buildDir,
     filename: "[name].bundle.js",
   },
   module: {

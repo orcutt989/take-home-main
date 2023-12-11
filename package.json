@@ -1,6 +1,7 @@
 {
   "name": "what-can-you-make",
   "version": "1.0.0",
+  "homepage": "https://orcutt989.github.io/take-home-main/",
   "description": "it's a take home test",
   "main": "index.js",
   "author": "zeal-devs",

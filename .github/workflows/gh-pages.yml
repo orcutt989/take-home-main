@@ -38,10 +38,15 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
     
-      - name: Upload artifact
+      - name: Upload frontend
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '/'
+          path: 'frontend/dist'
+
+      - name: Upload backend
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'backend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment

@@ -24,8 +24,8 @@ module.exports = {
     plugins: [PnpWebpackPlugin.moduleLoader(module)],
   },
   output: {
-    path: "./",
-    filename: "bundle.js",
+    path: buildDir,
+    filename: "[name].bundle.js",
   },
   module: {
     rules: [

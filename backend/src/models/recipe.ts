@@ -1,13 +1,13 @@
-import { Document, Schema, Model, model } from "mongoose"
-import { Ingredient, IngredientSchema } from "./ingredient"
+import { Document, Schema, Model, model } from "mongoose";
+import { Ingredient, IngredientSchema } from "./ingredient";
 
-export interface Recipe extends Document {
-  name: string
-  instructions: string
-  ingredients: Ingredient[]
+export interface Recipe {
+  name: string;
+  instructions: string;
+  ingredients: Ingredient[];
 }
 
-const RecipeSchema = new Schema({
+export const RecipeSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -18,6 +18,6 @@ const RecipeSchema = new Schema({
     required: true,
   },
   ingredients: [IngredientSchema],
-})
+});
 
-export const RecipeModel = model<Recipe, Model<Recipe>>("Recipe", RecipeSchema)
+export const RecipeModel = model<Recipe & Document>("Recipe", RecipeSchema);

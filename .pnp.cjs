@@ -2840,6 +2840,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "npm:1.4.0"
       ],
       [
+        "ncp",
+        "npm:2.0.0"
+      ],
+      [
         "negotiator",
         "npm:0.6.2"
       ],
@@ -4220,6 +4224,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-react-app", "npm:9.1.2"],
             ["esbuild", "npm:0.12.18"],
             ["esbuild-register", "npm:2.6.0"],
+            ["ncp", "npm:2.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=d8b4e7"]
@@ -17634,6 +17639,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["ncp", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/ncp-npm-2.0.0-2121969339-ea9b19221d.zip/node_modules/ncp/",
+          "packageDependencies": [
+            ["ncp", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["negotiator", [
         ["npm:0.6.2", {
           "packageLocation": "./.yarn/cache/negotiator-npm-0.6.2-ba538e167a-dfddaff6c0.zip/node_modules/negotiator/",
@@ -21712,6 +21726,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["babel-preset-react-app", "npm:9.1.2"],
             ["esbuild", "npm:0.12.18"],
             ["esbuild-register", "npm:2.6.0"],
+            ["ncp", "npm:2.0.0"],
             ["nodemon", "npm:2.0.7"],
             ["prettier", "npm:2.3.2"],
             ["typescript", "patch:typescript@npm%3A4.2.4#~builtin<compat/typescript>::version=4.2.4&hash=d8b4e7"]

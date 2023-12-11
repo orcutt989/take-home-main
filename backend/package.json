@@ -7,7 +7,7 @@
   "author": "zeal",
   "license": "MIT",
   "scripts": {
-    "build": "tsc && mv dist/* ../dist && rm -r dist",
+    "build": "tsc && ncp dist ../dist",
     "lint": "eslint src/ --ext .ts",
     "start": "nodemon -e ts --exec yarn dev-be",
     "dev-be": "node -r esbuild-register --inspect=0.0.0.0:9229 src/index.ts"

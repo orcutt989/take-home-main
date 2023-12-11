@@ -9060,6 +9060,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
+"ncp@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "ncp@npm:2.0.0"
+  bin:
+    ncp: ./bin/ncp
+  checksum: ea9b19221da1d1c5529bdb9f8e85c9d191d156bcaae408cce5e415b7fbfd8744c288e792bd7faf1fe3b70fd44c74e22f0d43c39b209bc7ac1fb8016f70793a16
+  languageName: node
+  linkType: hard
+
 "negotiator@npm:0.6.2":
   version: 0.6.2
   resolution: "negotiator@npm:0.6.2"
@@ -12601,6 +12610,7 @@ typescript@4.2.4:
     babel-preset-react-app: 9.1.2
     esbuild: 0.12.18
     esbuild-register: 2.6.0
+    ncp: ^2.0.0
     nodemon: 2.0.7
     prettier: 2.3.2
     typescript: 4.2.4

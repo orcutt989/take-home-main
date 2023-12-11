@@ -37,6 +37,7 @@
     "babel-preset-react-app": "9.1.2",
     "esbuild": "0.12.18",
     "esbuild-register": "2.6.0",
+    "ncp": "^2.0.0",
     "nodemon": "2.0.7",
     "prettier": "2.3.2",
     "typescript": "4.2.4"

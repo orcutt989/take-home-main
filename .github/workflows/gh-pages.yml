@@ -1,47 +1,48 @@
-name: Deploy to GitHub Pages
+name: Build and deploy 
 
 on:
   push:
     branches:
       - main
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
 
-      - name: Setup Node.js
+      - name: Set Node.js 16.x
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16.x
 
-      - name: Install Dependencies
-        run: |
-          cd frontend
-          yarn install
-          cd ../backend
-          yarn install
+      - name: Install 🔧
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
 
-      - name: Build and Deploy Frontend
-        run: |
-          cd frontend
-          yarn build
-          cp -r build/* ../dist
+      - name: Build 🏗️
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
 
-      - name: Build Backend
-        run: |
-          cd backend
-          yarn build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
     
-      - name: Upload dist
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: 'dist'
+          path: 'frontend/dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-
